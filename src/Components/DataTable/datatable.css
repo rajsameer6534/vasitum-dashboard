@@ -1,0 +1,35 @@
+.employee {
+  display: flex;
+  align-items: center;
+}
+
+.employee_avatar {
+  width: 35px;
+  height: 35px;
+}
+
+.status.active {
+  color: green;
+  font-weight: bold;
+}
+
+.status.on-leave {
+  color: orange;
+  font-weight: bold;
+}
+
+.action_buttons {
+  display: flex;
+  align-items: center;
+}
+
+.employee_table {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.data_grid {
+  height: 500px;
+  background-color: white;
+}

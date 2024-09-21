@@ -1,0 +1,159 @@
+/* Navbar Base */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.menu_logo {
+  display: flex;
+  align-items: center;
+}
+
+.menu_icon {
+  font-size: 28px;
+  cursor: pointer;
+  margin-right: 15px;
+  color: var(--icon-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu_icon:hover {
+  transform: rotate(90deg);
+  color: var(--accent-color);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: var(--input-bg);
+  padding: 6px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background: none;
+  color: var(--text-color);
+  padding: 6px;
+  width: 200px;
+}
+
+.search_icon {
+  margin-left: 8px;
+  color: var(--icon-color);
+}
+
+.item_lists {
+  display: flex;
+  align-items: center;
+}
+
+.item {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.admin_pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.welcome-text {
+  font-size: 14px;
+  color: var(--text-color);
+  margin-left: 10px;
+}
+
+.res_navbar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.res_nav_menu {
+  background-color: var(--background-color);
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.links {
+  list-style: none;
+}
+
+.menu_item {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 18px;
+}
+
+.menu_item:hover {
+  color: var(--accent-color);
+}
+
+/* Dark Mode Variables */
+:root {
+  --background-color: #ffffff;
+  --input-bg: #f5f5f5;
+  --icon-color: #3d3d3d;
+  --text-color: #333333;
+  --accent-color: #ff5722;
+}
+
+[data-theme="dark"] {
+  --background-color: #1f1f1f;
+  --input-bg: #333333;
+  --icon-color: #ffffff;
+  --text-color: #f5f5f5;
+  --accent-color: #ff5722;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .search {
+    display: none;
+  }
+
+  .menu_logo {
+    flex-grow: 1;
+  }
+
+  .navbar_main {
+    padding: 10px 15px;
+  }
+
+  .welcome-text {
+    display: none;
+  }
+}
